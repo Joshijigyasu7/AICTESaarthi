@@ -1,4 +1,10 @@
-
+body{
+  background-image:url('Designer.png');
+  background-size:cover;
+  background-position: center;
+  background-repeat:no-repeat;
+  height: 100vh;
+  margin:0;}
 .login-container {
   background-color: #fff;
   font-family: Inter, sans-serif;
