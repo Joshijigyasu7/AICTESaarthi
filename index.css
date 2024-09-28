@@ -25,7 +25,13 @@ body{
     padding-bottom: 100px;
   }
 }
-
+.background-image {
+  position: absolute;
+  inset: 0;
+  height: 80vh;
+  object-fit: cover;
+  object-position: center;
+}
 
 
 .header {
