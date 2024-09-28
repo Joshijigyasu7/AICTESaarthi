@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Quiz Group - NIELIT Ajmer</title>
+    <style>
+        /* Reset some default styles */
+        body, h1, h2, h3, p, ul, li, form, input, textarea, button {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #002147;
+            color: #fff;
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        header .logo {
+            float: left;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        header nav {
+            float: right;
+        }
+
+        header nav ul {
+            list-style: none;
+        }
+
+        header nav ul li {
+            display: inline;
+            margin-left: 20px;
+        }
+
+        header nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        header::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Banner Styles */
+        .banner {
+            background: url('https://via.placeholder.com/1200x400') no-repeat center center/cover;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-align: center;
+            margin-top: 80px; /* To prevent overlap with fixed header */
+        }
+
+        .banner h1 {
+            font-size: 48px;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* About Us Section */
+        #about {
+            padding: 60px 0;
+            background-color: #fff;
+        }
+
+        #about .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        #about .section-title h2 {
+            font-size: 32px;
+            color: #002147;
+        }
+
+        #about p {
+            max-width: 800px;
+            margin: auto;
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+        /* Announcement Bars */
+        .announcement-bar {
+            background-color: #e2e2e2;
+            padding: 10px 0;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+
+        .announcement-bar p {
+            display: inline-block;
+            animation: scroll 15s linear infinite;
+            font-size: 16px;
+            margin-left: 100%;
+        }
+
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-100%); }
+        }
+
+        /* Quiz Sections */
+        .quiz-section {
+            padding: 60px 0;
+            background-color: #f9f9f9;
+        }
+
+        .quiz-section:nth-child(even) {
+            background-color: #fff;
+        }
+
+        .quiz-section .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .quiz-section .section-title h2 {
+            font-size: 28px;
+            color: #002147;
+        }
+
+        .quiz-section .content {
+            width: 80%;
+            max-width: 1000px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .quiz-section .content p {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        .quiz-section .content a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #002147;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        /* Contact Us Section */
+        #contact {
+            padding: 60px 0;
+            background-color: #fff;
+        }
+
+        #contact .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        #contact .section-title h2 {
+            font-size: 32px;
+            color: #002147;
+        }
+
+        #contact .contact-info {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+
+        #contact .contact-info div {
+            flex: 1 1 200px;
+            margin: 10px;
+        }
+
+        #contact form {
+            width: 80%;
+            max-width: 600px;
+            margin: auto;
+        }
+
+        #contact form input, 
+        #contact form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        #contact form button {
+            padding: 10px 20px;
+            background-color: #002147;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* Register Section */
+        #register {
+            padding: 60px 0;
+            background-color: #f9f9f9;
+        }
+
+        #register .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        #register .section-title h2 {
+            font-size: 32px;
+            color: #002147;
+        }
+
+        #register form {
+            width: 80%;
+            max-width: 600px;
+            margin: auto;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        #register form input, 
+        #register form select, 
+        #register form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        #register form button {
+            padding: 10px 20px;
+            background-color: #002147;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #002147;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        footer .social-icons a {
+            margin: 0 5px;
+            font-size: 18px;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            header .logo, header nav {
+                float: none;
+                text-align: center;
+            }
+
+            header nav ul li {
+                display: block;
+                margin: 10px 0;
+            }
+
+            #contact .contact-info {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">NIELIT Ajmer</div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#programming-quiz">Programming Quiz</a></li>
+                    <li><a href="#aptitude-quiz">Aptitude Quiz</a></li>
+                    <li><a href="#announcements">Announcements</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                    <li><a href="#register">Register</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Banner -->
+    <section class="banner" id="home">
+        <h1>Technical Quiz Group - NIELIT Ajmer</h1>
+    </section>
+
+    <!-- About Us -->
+    <section id="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>About NIELIT Ajmer</h2>
+            </div>
+            <p>
+                The National Institute of Electronics and Information Technology (NIELIT) Ajmer is dedicated to providing quality education and training in the fields of electronics, information technology, and related areas. Our mission is to empower students with the knowledge and skills necessary to excel in the rapidly evolving technological landscape. The Technical Quiz Group at NIELIT Ajmer fosters a competitive and collaborative environment where students can test and enhance their programming and general aptitude skills.
+            </p>
+        </div>
+    </section>
+
+    <!-- Announcement Bars -->
+    <div class="announcement-bar">
+        <p>📢 Upcoming Programming Quiz on May 15th! Register now to participate and showcase your coding skills.</p>
+    </div>
+    <div class="announcement-bar">
+        <p>📢 Engineering Aptitude Test scheduled for June 10th. Prepare well and stand a chance to win exciting prizes!</p>
+    </div>
+
+    <!-- Programming Quiz Section -->
+    <section class="quiz-section" id="programming-quiz">
+        <div class="container">
+            <div class="section-title">
+                <h2>Programming Quiz</h2>
+            </div>
+            <div class="content">
+                <p>
+                    Our Programming Quiz challenges participants with questions spanning various programming languages, algorithms, and problem-solving techniques. Whether you're a beginner or an experienced coder, this quiz is designed to test your coding prowess and logical thinking.
+                </p>
+                <a href="#">View Past Quizzes</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Engineering Aptitude Quiz Section -->
+    <section class="quiz-section" id="aptitude-quiz">
+        <div class="container">
+            <div class="section-title">
+                <h2>Engineering Aptitude Quiz</h2>
+            </div>
+            <div class="content">
+                <p>
+                    The Engineering Aptitude Quiz focuses on logical reasoning, quantitative aptitude, and verbal ability. It's a great opportunity to sharpen your analytical skills and prepare for competitive exams in the engineering domain.
+                </p>
+                <a href="#">View Preparation Materials</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Us -->
+    <section id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contact Us</h2>
+            </div>
+            <div class="contact-info">
+                <div>
+                    <h3>Email</h3>
+                    <p>quizgroup@nielitajmer.ac.in</p
