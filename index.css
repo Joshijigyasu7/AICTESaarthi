@@ -5,6 +5,7 @@ body{
   background-repeat:no-repeat;
   height: 100vh;
   margin:0;}
+
 .login-container {
   background-color: #fff;
   font-family: Inter, sans-serif;
@@ -25,13 +26,7 @@ body{
   }
 }
 
-.background-image {
-  position: absolute;
-  inset: 0;
-  height: 80vh;
-  object-fit: cover;
-  object-position: center;
-}
+
 
 .header {
   position: relative;
