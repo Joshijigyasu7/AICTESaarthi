@@ -1,11 +1,22 @@
+*{
+  padding: 0%;
+  margin : 0%;
+}
 body{
+  background-image: url(Designer3.png);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+
+}
+/*body{
   background-image:url('Designer3.png');
   background-size:cover;
   background-position: center;
   background-repeat:no-repeat;
   height: 100vh;
   margin:0;}
-
+*/
 .login-container {
   background-color: #fff;
   font-family: Inter, sans-serif;
@@ -28,26 +39,26 @@ body{
 .background-image {
   position: absolute;
   inset: 0;
-  height: 80vh;
+  height: 100vh;
   object-fit: cover;
   object-position: center;
 }
 .background-image {
   position: absolute;
   inset: 0;
-  height: 80vh;
+  height: 100vh;
   object-fit: cover;
   object-position: center;
 }
 .header {
   display: flex;
   justify-content: flex-end; /* Aligns the link to the right */
-  padding: 10px 80px;
+  padding: 5px 40px;
   background-color: rgba(0, 0, 0, 0.6);
 
   align-items: flex-end;
-  font-size: 30px;
-  font-weight: 600;
+  font-size: 20px;
+  font-weight: 500;
   
   
   border: 1px solid #000;
@@ -65,7 +76,7 @@ body{
   border: 1px solid #000;
 }*/
 
-@media (max-width: 991px) {
+@media (max-width: 800px) {
   .header {
     max-width: 100%;
     padding: 0 20px;
@@ -76,7 +87,7 @@ body{
   border-radius: 12px;
   background-color: rgba(41, 104, 199, 0.4);
   color: white;
-  padding: 11px 12px;
+  padding: 5px 8px;
 }
 
 /*.login-form {
@@ -104,8 +115,9 @@ body{
   border-radius: 20px;
   background-color: rgba(16, 36, 60, 0.78);
   display: flex;
-  width: 500px; /* Reduced width */
+  width: 350px; /* Reduced width */
   max-width: 100%;
+  height: 400px;
   flex-direction: column;
   align-items: center;
   font-weight: 800;
@@ -132,7 +144,7 @@ body{
   aspect-ratio: 1.01;
   object-fit: contain;
   object-position: center;
-  width: 75px;
+  width: 60px;
 }
 
 .logo-text {
@@ -145,8 +157,8 @@ body{
 }
 
 .logo-text-hindi {
-  font-size: 24px;
-  border: 1px solid #000;
+  font-size: 16px;
+  
 }
 
 @media (max-width: 991px) {
@@ -156,34 +168,35 @@ body{
 }
 
 .logo-text-english {
-  font-size: 15px;
-  margin-top: 7px;
+  font-size: 10px;
+  margin-top: 3px;
 }
 
 .input-field {
-  border-radius: 20px;
+  border-radius: 10px;
   background-color: rgba(35, 60, 97, 0.74);
-  width: 359px;
+  width: 220px;
+  height: 7px;
   max-width: 100%;
-  font-size: 30px;
-  font-weight: 600;
+  font-size: 20px;
+  font-weight:560;
   padding: 16px 20px;
 }
 
 .username-field {
-  margin-top: 52px;
+  margin-top: 7px;
   color: white;
 }
 
 @media (max-width: 991px) {
   .username-field {
-    margin-top: 40px;
+    margin-top: 7px;
     
   }
 }
 
 .password-field {
-  margin-top: 28px;
+  margin-top:10px;
   color: white;
 }
 
@@ -197,10 +210,11 @@ body{
 .sign-in-button {
   border-radius: 20px;
   background-color: #2968c7;
-  margin-top: 46px;
-  width: 180px; /* Ensure enough width */
+  margin-top: 16px;
+  width: 150px; /* Ensure enough width */
   max-width: 100%;
-  font-size: 24px;
+  
+  font-size: 15px;
   text-align: center;
   padding: 15px 0; /* Adjust padding to center the text */
   white-space: nowrap; /* Prevents text wrapping */
@@ -218,36 +232,36 @@ body{
 
 @media (max-width: 991px) {
   .sign-in-button {
-    margin-top: 40px;
+    margin-top: 13px;
     padding: 0 20px;
   }
 }
 
 .account-prompt {
-  font-size: 18px;
+  font-size: 15px;
   text-align: center;
-  margin-top: 68px;
+  margin-top: 13px;
   color: white;
 }
 
 @media (max-width: 991px) {
   .account-prompt {
-    margin-top: 40px;
+    margin-top: 13px;
   }
 }
 
 .new-institute-link {
   color: #ff8c39;
-  font-size: 30px;
+  font-size: 25px;
   text-align: center;
-  margin-top: 34px;
+  margin-top: 13px;
 }
 
 .forgot-password-link {
   color: #ff8c39;
-  font-size: 28px;
+  font-size: 25px;
   text-align: center;
-  margin-top: 25px;
+  margin-top: 13px;
 }
 
 .visually-hidden {
@@ -261,3 +275,4 @@ body{
   white-space: nowrap;
   border: 0;
 } 
+
