@@ -181,11 +181,28 @@ body{
     
   }
 }
+.password-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
 
 .password-field {
-  margin-top: 28px;
+  flex: 1; /* To make sure the input field takes the available width */
+  padding-right: 40px; /* Space for the eye icon */
+}
+
+.toggle-password {
+  position: absolute;
+  right: 10px; /* Adjust as needed */
+  cursor: pointer;
+  font-size: 20px; /* Adjust the size */
   color: white;
 }
+/*.password-field {
+  margin-top: 28px;
+  color: white;
+}*/
 
 @media (max-width: 991px) {
   .password-field {
