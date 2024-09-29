@@ -24,14 +24,21 @@
         </div>
         <label for="username" class="visually-hidden">User Name</label>
         <input type="text" id="username" class="input-field username-field" placeholder="User Name" />
-        <label for="password" class="visually-hidden">Password</label>
+        
+          <div class="password-container">
+  <label for="password" class="visually-hidden">Password</label>
+  <input type="password" id="password" class="input-field password-field" placeholder="Password" />
+  <span class="toggle-password" onclick="togglePasswordVisibility()">
+    👁️
+  </span>
+</div>
         <script>
-          function togglePasswordVisibility() {
-            const passwordField = document.getElementById('password');
-            const type = passwordField.getAttribute('type') === 'password' ? 'text' : 'password';
-            passwordField.setAttribute('type', type);
-          }
-        </script>
+  function togglePasswordVisibility() {
+    const passwordField = document.getElementById('password');
+    const type = passwordField.getAttribute('type') === 'password' ? 'text' : 'password';
+    passwordField.setAttribute('type', type);
+  }
+</script>
         <input type="password" id="password" class="input-field password-field" placeholder="Password" />
         <button type="submit" class="sign-in-button">Sign In</button>
         <p class="account-prompt">Don't have Account?</p>
