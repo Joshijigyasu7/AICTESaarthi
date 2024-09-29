@@ -181,25 +181,8 @@ body{
     
   }
 }
-.password-container {
-  position: relative;
-  display: flex;
-  align-items: center;
-}
 
 .password-field {
-  flex: 1; /* To make sure the input field takes the available width */
-  padding-right: 40px; /* Space for the eye icon */
-}
-
-.toggle-password {
-  position: absolute;
-  right: 10px; /* Adjust as needed */
-  cursor: pointer;
-  font-size: 20px; /* Adjust the size */
-  color: white;
-}
-/*.password-field {
   margin-top: 28px;
   color: white;
 }
@@ -210,7 +193,7 @@ body{
     padding: 0 20px;
     
   }
-}*/
+}
 .sign-in-button {
   border-radius: 20px;
   background-color: #2968c7;
