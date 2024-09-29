@@ -1,5 +1,5 @@
 body{
-  background-image:url('Designer.png');
+  background-image:url('Designer3.png');
   background-size:cover;
   background-position: center;
   background-repeat:no-repeat;
@@ -32,9 +32,27 @@ body{
   object-fit: cover;
   object-position: center;
 }
-
-
+.background-image {
+  position: absolute;
+  inset: 0;
+  height: 80vh;
+  object-fit: cover;
+  object-position: center;
+}
 .header {
+  display: flex;
+  justify-content: flex-end; /* Aligns the link to the right */
+  padding: 10px 80px;
+  background-color: rgba(0, 0, 0, 0.6);
+
+  align-items: flex-end;
+  font-size: 30px;
+  font-weight: 600;
+  
+  
+  border: 1px solid #000;
+}
+/*.header {
   position: relative;
   background-color: rgba(0, 0, 0, 0.6);
   display: flex;
@@ -45,7 +63,7 @@ body{
   justify-content: center;
   padding: 10px 80px;
   border: 1px solid #000;
-}
+}*/
 
 @media (max-width: 991px) {
   .header {
@@ -57,10 +75,11 @@ body{
 .main-website-link {
   border-radius: 12px;
   background-color: rgba(41, 104, 199, 0.4);
+  color: white;
   padding: 11px 12px;
 }
 
-.login-form {
+/*.login-form {
   position: relative;
   border-radius: 20px;
   background-color: rgba(16, 36, 60, 0.78);
@@ -78,6 +97,27 @@ body{
   .login-form {
     margin: 40px 0 10px;
     padding: 0 20px;
+  }
+}*/
+.login-form {
+  position: relative;
+  border-radius: 20px;
+  background-color: rgba(16, 36, 60, 0.78);
+  display: flex;
+  width: 500px; /* Reduced width */
+  max-width: 100%;
+  flex-direction: column;
+  align-items: center;
+  font-weight: 800;
+  margin: 30px 0 -70px 29px; /* Center the login form */
+  padding: 36px 23px;
+}
+
+@media (max-width: 991px) {
+  .login-form {
+    margin: 20px auto; /* Adjust margin for mobile */
+    width: 90%; /* Use a percentage width for better responsiveness */
+    padding: 20px;
   }
 }
 
@@ -132,26 +172,40 @@ body{
 
 .username-field {
   margin-top: 52px;
+  color: white;
 }
 
 @media (max-width: 991px) {
   .username-field {
     margin-top: 40px;
+    
   }
 }
 
 .password-field {
   margin-top: 28px;
+  color: white;
 }
 
 @media (max-width: 991px) {
   .password-field {
     white-space: initial;
     padding: 0 20px;
+    
   }
 }
-
 .sign-in-button {
+  border-radius: 20px;
+  background-color: #2968c7;
+  margin-top: 46px;
+  width: 180px; /* Ensure enough width */
+  max-width: 100%;
+  font-size: 24px;
+  text-align: center;
+  padding: 15px 0; /* Adjust padding to center the text */
+  white-space: nowrap; /* Prevents text wrapping */
+}
+/*.sign-in-button {
   border-radius: 20px;
   background-color: #2968c7;
   margin-top: 46px;
@@ -160,7 +214,7 @@ body{
   font-size: 24px;
   text-align: center;
   padding: 15px 51px;
-}
+}*/
 
 @media (max-width: 991px) {
   .sign-in-button {
@@ -170,9 +224,10 @@ body{
 }
 
 .account-prompt {
-  font-size: 24px;
+  font-size: 18px;
   text-align: center;
   margin-top: 68px;
+  color: white;
 }
 
 @media (max-width: 991px) {
