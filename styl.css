@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Header */
+.header {
+    display: flex;
+    align-items: center;
+    background-color: #FFD966;
+    padding: 10px 20px;
+}
+
+.logo {
+    height: 60px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.header-text h1 {
+    font-size: 24px;
+    color: #000;
+    margin-bottom: 5px;
+cursor: pointer;
+}
+
+.header-text p {
+    font-size: 18px;
+    color: #333;
+cursor:pointer;
+}
+
+/* New Registration Button */
+.new-registration {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.new-registration-button {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Form Styling */
+.registration-form {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.form-left, .form-right {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    margin: 0 10px;
+}
+
+label {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+input[type="text"], input[type="email"], input[type="tel"], select, input[type="file"] {
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+.form-divider {
+    width: 2px;
+    background-color: #28a745;
+    margin: 0 10px;
+}
+
+/* Submit Button */
+.submit-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.submit-button {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
