@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEW REGISTRATION</title>
+    <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+
+   
+    <div class="header">
+       <img src="aicte.png" alt="AICTE Logo" class="logo">
+        <div class="header-text" onclick="window.location.href='https://www.aicte-india.org/'">
+            <h1>अखिल भारतीय तकनीकी शिक्षा परिषद</h1>
+            <p>ALL INDIA COUNCIL FOR TECHNICAL EDUCATION</p>
+        </div>
+    </div>
+
+   
+<h2 style="text-align: center; color: #fff; background-color: #4CAF50; padding: 10px 20px; border-radius: 5px; width: fit-content; margin: 20px auto;">
+    NEW REGISTRATION
+</h2>
+
+  
+    <form class="registration-form">
+        <div class="form-left">
+            <label for="institute-name">Name of University/College/Institute:</label>
+            <input type="text" id="institute-name" name="institute-name">
+
+            <label for="type">Type:</label>
+<select id="type" name="type">
+    <option value="">Select</option>
+    <option value="private">Private</option>
+    <option value="government-central">Government Funded (Central)</option>
+    <option value="government-state">Government Funded (State)</option>
+</select>
+
+            <label for="state">State:</label>
+            <input type="text" id="state" name="state">
+
+            <label for="city">City:</label>
+            <input type="text" id="city" name="city">
+
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address">
+
+            <label for="pincode">Pin code:</label>
+<input type="text" id="pincode" name="pincode" pattern="\d{6}" title="Please enter exactly 6 digits" placeholder="Enter 6-digit pincode" required>
+        </div>
+
+        <div class="form-divider"></div>
+
+        <div class="form-right">
+            <label for="certificate">Institute Registration Certificate:</label>
+            <input type="file" id="certificate" name="certificate">
+
+            <label for="head-name">Head of Institute Name:</label>
+            <input type="text" id="head-name" name="head-name">
+
+            <label for="hoi-email">HOI Email:</label>
+            <input type="email" id="hoi-email" name="hoi-email">
+
+           <label for="phone">HOI Contact Number:</label>
+<div style="display: flex; align-items: center; border: 1px solid #ccc; border-radius: 4px; overflow: hidden; width: 250px;">
+    <span style="padding: 10px; background-color: #f0f0f0; color: #333; font-weight: bold;">+91</span>
+    <input type="tel" id="phone" name="phone" pattern="\d{10}" placeholder="Enter 10-digit mobile number" maxlength="10" required style="border: none; outline: none; padding: 10px; width: 100%;">
+</div>
+
+
+            <label for="landline">Institute Landline Number:</label>
+            <input type="tel" id="landline" name="landline" placeholder="Optional">
+        </div>
+    </form>
+
+   
+    <div class="submit-container">
+        <button type="submit" class="submit-button">Submit</button>
+    </div>
+
+</body>
+</html>
